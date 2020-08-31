@@ -12,7 +12,7 @@
 
 using namespace std;
 
-class funciones{
+class Funciones{
   public:
 
     int sumaIterativa(int n){
