@@ -20,6 +20,10 @@ Al igual que el caso particular anterior en esta función como tal su comportami
 
 *Ordenar un arreglo por el metodo de split y merge (mergeSort)*
 
+Esta función presenta una complejidad de O(n*log(n)):
+
+Esto se demuestra en la naturaleza de que es una función recursiva la cual se encarga una función en separar al arreglo en subarreglo que son la mitad del arreglo principal, y al hacer esto presenta una complejidad de O(n/2) que se convertirá en una complejidad de O(log(n)). Por último se encuentra la segunda parte de la función principal que es la parte de merge que se basa en convinar y acomodar los subarreglos formados por la función split dando como resultado que tenga una complejidad de O(n), por último al multiplicar ambas complejidades dando O(log(n)) * O(n) = O(n*log(n)).
+
 
 
 ## Busquedas dentro de Arreglos
@@ -34,4 +38,4 @@ Esto se demuestra en la forma en la cual opera la función con tan solo un ciclo
 
 Esta función presenta una complejidad de O(log(n)):
 
-Esta función demuestra esta complejidad por la forma en la que opera, ya que genera arboles de ramificaciones las cuales le hacen realizar una cantidad excesiva menor de pasos que en el caso de la secuencial en la cual se debe el número de pasos es lineal al número de elementos del arreglo. La forma en la que funciona es que por medio del uso de la sentencia if() y else if() la función va descartando partes del arreglo para llegar a la solución en una menor cantidad de pasos ya que siempre empieza en la parte media del arreglo y dependiendo del si el valor es mayor o menor a la referencia central (o en el caso de que sea igual ahí se detiene la función), la función toma la mitad ya sea la mayor o la menor e ignora a la otra mitad logrando de esta manera eliminar pasos innecesarios y disminuir la complejidad de O(n) a O(log(n)).
+Esta función demuestra esta complejidad por la forma en la que opera, ya que genera arboles de ramificaciones las cuales le hacen realizar una cantidad excesiva menor de pasos que en el caso de la secuencial en la cual se debe el número de pasos es lineal al número de elementos del arreglo. La forma en la que funciona es que por medio del uso de la sentencia if() y else if() la función va descartando partes del arreglo para llegar a la solución en una menor cantidad de pasos ya que siempre empieza en la parte media del arreglo y dependiendo del si el valor es mayor o menor a la referencia central (o en el caso de que sea igual ahí se detiene la función), la función toma la mitad ya sea la mayor o la menor e ignora a la otra mitad logrando de esta manera eliminar pasos innecesarios y disminuir la complejidad de O(n) a O(log(n)). Ya que de manera matemática tenemos una O(n/2^k), ya que constantemente como se mencionó en el análisis se va partiendo a la mitad el arreglo.
