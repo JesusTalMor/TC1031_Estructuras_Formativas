@@ -1,4 +1,4 @@
-# Analisis de Asintotico de Complejidad
+# Analisis Asintotico de Complejidad
 ## Función add()
 
 Para este caso a comparación de la complejidad del ejercicio de una lista con solo un nodo, su complejidad cambia a ser en el peor de los casos un O(1), ya que para los 2 casos dejando de lado, el caso particular en el cual se quiera agregar un objeto a la lista en una posición determinada. Tenemos que para ambos casos en el cual se quiera poner el primer objeto o se quiera poner un objeto al principio tendremos una complejidad de O(1), ya que se sabe la posicion y tenemos el apuntador head para hacer el acomple. Ahora para el caso de add de manera común donde se quiere añadir un objeto al final de la cadena, para es caso ya que es una lista doblemente encadenada tenemos un apuntador tail el cual nos permite saber exactamente donde esta el final de la lista y usando este apuntador, nos ahorramos los pasos de recorrer todo el arreglo hasta llegar al final del mismo. En conclusión la compejidad de esta función de O(1)
