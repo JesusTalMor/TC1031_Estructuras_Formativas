@@ -1,6 +1,5 @@
 # Analisis Asintotico de Comlpejidad
 ## Función visit()
-
 Para esta primera función la cual es para generar una cadena de caracteres con las diferentes formas de presentar un BST que son: inorder, preorder, postorder, level. Para cada una de las funciones secundarias mencionadas todas presentan una complejidad de O(n), ya que que tiene que recorrer todo el BST para lograr imprimir todos los valores, pero ya que tenemos que son 4 procesos diferentes la complejidad final de la función es de O(4n) que al redondearse queda como una complejidad final de O(n).
 
 ## Función height()
