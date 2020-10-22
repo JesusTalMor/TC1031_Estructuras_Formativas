@@ -360,6 +360,7 @@ void SplayTree<T>::remove(T val) {
       root = root->splay(root,p);
     }
   }
+  size --;
 }
 
 template <class T>
