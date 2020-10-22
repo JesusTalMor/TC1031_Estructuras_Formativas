@@ -305,6 +305,7 @@ class SplayTree {
 
 private:
   Nodo<T> *root;
+  int size;
 
 public:
   SplayTree();
@@ -335,6 +336,7 @@ void SplayTree<T>::add(T val) {
   else {
     root = new Nodo<T>(val);
   }
+  size ++;
 }
 
 template <class T>
@@ -409,7 +411,7 @@ string SplayTree<T>::preorder() const {
 
 template <class T>
 int SplayTree<T>::size(){
-	return 0;
+	return size;
 }
 
 #endif /*SPLAY_H_*/
