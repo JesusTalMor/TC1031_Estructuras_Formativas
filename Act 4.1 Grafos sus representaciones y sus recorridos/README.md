@@ -1,1 +1,14 @@
+# Análisis Asintotico de Complejidad
+## Función loadGraphList()
+Esta funcion cuenta con una complejidad neta de O(n), ya que en si lo que realiza es que abre un archivo de texto y con base en la cantidad de lineas que este tenga, va sacando la información de los nodos y lo va guardando lo cual presenta en el guardado una complejidad de O(1) y al ser la lineas las que definen los pasos que da este procesos este mantiene una complejidad de O(n).
 
+## Función loadGraphMat()
+Al igual que en el caso anterior en el que esta función abre primero un archivo de texto del cual extrae la información de los nodos que posteriormente guarda en un solo paso. Esta función al igual que la anterior presenta una complejidad de O(n), ya que esta el lineal a la cantidad de lineas que tenga el archivo txt.
+
+## Función DFS()
+Para el analisis de esta función se tiene que ver lo que hace, primeramente esta función lo que realiza es una busqueda por profundidad donde se le da un nodo de inicio y un nodo meta que es el esta buscando la función. Durante todo este proceso la función que es recursiva, va constantemente preguntando y buscando nodos los cuales tenga conexiones parecido al BFS pero en este caso, el algoritmo solo sigue una ruta a la vez, siendo un ejemplo de esto donde tenemos un nodo 0 conectado a 1,2,3, en el caso de BFS este podria en su camino todos los nodos pero en el caso de DFS este va primero por un nodo hasta no encontrar mas lugares a donde ir ya sea que no este conectado a nada mas o ya haya sido visitado. Dando en general una complejidad de O(V+E) donde V son los vertices o los nodos totales del arreglo viendo en el peor de los casos donde se tenga que recorrer todos los nodos para encontrar el meta y E siendo estos los arcos o la conexiones totales con las que cuenta la estructura. Dando como ya dije una complejidad final de O(V+E)
+Fuente consultada: https://www.youtube.com/watch?v=bP3MWJHeohc&t=360s
+
+## Función BFS()
+Esta función al igual que la anterior presenta una complejidad media o promedio de O(V+E), ya que al igual que la anterior se tiene que realizar una busqueda pero ahora por nivel o amplitud lo que define finalmente el algoritmo como una función la cual empieza en un nodo raiz o inicio y va añadiendo a su path todos los nodos que esten conectados a la raiz para posteriormente pasar a los siguientes nodos y realizar lo mismo hasta llegar a la meta lo que da en general una complejidad de O(v) donde se visitan todos los nodos y por ultimo tenemos una complejidad extra de O(E) dando una suma en la complejidad final de O(V+E), ya que este algoritmo se comporta de manera similar al DFS moviendose por cada vertice o nodo y en base a los arcos medios que existan en la estrcutura estos serán los arcos que tendra que recorrer. Dando una complejidad final de O(V+E)
+Fuente consultada: https://www.youtube.com/watch?v=4Y52Yw0m-lo
