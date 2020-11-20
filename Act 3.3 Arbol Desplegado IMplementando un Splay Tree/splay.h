@@ -329,6 +329,7 @@ bool SplayTree<T>::empty() const {
 
 template <class T>
 void SplayTree<T>::add(T val) {
+  count ++;
   if ( root != 0) {
     Nodo<T>* added = root->add(val);
     root = root->splay(root,added);
@@ -336,7 +337,6 @@ void SplayTree<T>::add(T val) {
   else {
     root = new Nodo<T>(val);
   }
-  count ++;
 }
 
 template <class T>
@@ -360,7 +360,6 @@ void SplayTree<T>::remove(T val) {
       root = root->splay(root,p);
     }
   }
-  size --;
 }
 
 template <class T>
@@ -411,8 +410,8 @@ string SplayTree<T>::preorder() const {
 }
 
 template <class T>
-int SplayTree<T>::size(){
-	return count;
+int SplayTree<T>::size() {
+  return count;
 }
 
 #endif /*SPLAY_H_*/
