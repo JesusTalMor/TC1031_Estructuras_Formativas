@@ -336,7 +336,7 @@ void SplayTree<T>::add(T val) {
   else {
     root = new Nodo<T>(val);
   }
-  size ++;
+  count ++;
 }
 
 template <class T>
