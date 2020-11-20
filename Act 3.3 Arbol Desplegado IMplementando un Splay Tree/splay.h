@@ -1,6 +1,6 @@
 /*
  * splay.h
- * Creado en 21/10/2020
+ * Creado en 21/10/2020 actualizado en 20/11/2020
  * Autor: Jesus Talamantes Morales A01706335
  */
 
@@ -305,7 +305,7 @@ class SplayTree {
 
 private:
   Nodo<T> *root;
-  int size;
+  int count;
 
 public:
   SplayTree();
@@ -412,7 +412,7 @@ string SplayTree<T>::preorder() const {
 
 template <class T>
 int SplayTree<T>::size(){
-	return size;
+	return count;
 }
 
 #endif /*SPLAY_H_*/
