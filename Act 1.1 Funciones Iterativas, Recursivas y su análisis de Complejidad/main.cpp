@@ -11,7 +11,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-	funciones fun;
+	Funciones fun;
 	int i = 20;
 
 	/*	inician en el el renglon 20 para que el primer test 0 sea
