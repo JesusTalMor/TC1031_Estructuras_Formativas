@@ -1,6 +1,6 @@
 /*
  * bst.h
- * Creado en: 12/10/2020
+ * Creado en: 12/10/2020 actualizado en 21/11/2020
  * Autor: Jesus Talamantes Morales
  */
 
@@ -151,23 +151,25 @@ void Nodo<T>::postorder(std::stringstream &aux) const {
 template <class T>
 void Nodo<T>::porNivel(std::stringstream &aux) const {
   int nivel = height();
-  impNivel(aux, nivel);
+  for(int i = 0; i < nivel; i++){
+    impNivel(aux, i);
+  }
 }
 
 template<class T>
 void Nodo<T>::impNivel(std::stringstream &aux, int niv) const{
-  if(niv >= 0){
+  if(niv == 0){ //Caso base
 		if (aux.tellp() != 1) {
 			aux << " ";
 		}
 		aux << valor;
 	}
   if (izq != 0) {
-		izq->impNivel(aux, niv -1);
-	}
-	if (der != 0) {
-		der->impNivel(aux, niv -1);
-	}
+      izq->impNivel(aux, niv -1);
+  	}
+  if (der != 0) {
+    der->impNivel(aux, niv -1);
+    }
 }
 
 template <class T>
